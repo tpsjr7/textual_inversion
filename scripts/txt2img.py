@@ -115,7 +115,7 @@ if __name__ == "__main__":
     opt = parser.parse_args()
 
 
-    config = OmegaConf.load("configs/latent-diffusion/txt2img-1p4B-eval_with_tokens.yaml")  # TODO: Optionally download from same location as ckpt and chnage this logic
+    config = OmegaConf.load("logs/input2022-09-08T00-04-36_chattyrun1/configs/eval.yaml")  # TODO: Optionally download from same location as ckpt and chnage this logic
     model = load_model_from_config(config, opt.ckpt_path)  # TODO: check path
     model.embedding_manager.load(opt.embedding_path)
 

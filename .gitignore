@@ -1,0 +1,9 @@
+.cache/
+outputs/
+*.iml
+sd-enable-textual-inversion/
+logs/
+.idea/
+*.zip
+*.ckpt
+models/ldm/inpainting_big/archive/
