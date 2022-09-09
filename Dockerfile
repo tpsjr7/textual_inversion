@@ -10,7 +10,7 @@ RUN apt-get update && apt install fonts-dejavu-core rsync -y && apt-get clean
 COPY evaluation/ /app/evaluation
 COPY ldm/ /app/ldm
 
-COPY *.py /app
+COPY *.py /app/
 SHELL ["/bin/bash", "-ceuxo", "pipefail"]
 
 RUN conda init bash \
@@ -22,7 +22,7 @@ RUN conda init bash \
       -e .
 
 COPY scripts/ /app/scripts
-COPY *.sh /app
+COPY *.sh /app/
 COPY configs/ /app/configs
 
 

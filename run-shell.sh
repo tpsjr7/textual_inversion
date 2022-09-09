@@ -14,5 +14,5 @@ docker run \
   -v /mnt/c/ted/code/img-gen/sd-v1-4.ckpt:/app/models/sd-v1-4.ckpt \
   -v ${base_path}/logs:/app/logs \
   -v ${base_path}/outputs:/app/outputs \
-  --gpus 1 -it --rm ted/textinv bash
+  --gpus 1 -it --rm textual-inversion bash
 
