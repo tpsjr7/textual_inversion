@@ -7,3 +7,6 @@ logs/
 *.zip
 *.ckpt
 models/ldm/inpainting_big/archive/
+latent_diffusion.egg-info/
+src/
+.pyc
