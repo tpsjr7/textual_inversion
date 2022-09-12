@@ -1,16 +1,15 @@
 #!/bin/bash
+
 cd /app
 
 if ! conda env list | grep ldm ; then
     conda env create -f environment.yaml
-    echo "source conda activate ldm" >> /root/.bashrc
-    conda activate ldm
+    echo "conda activate ldm" >> /root/.bashrc
+    conda /root/.bashrc
     pip install \
           -e git+https://github.com/CompVis/taming-transformers.git@24268930bf1dce879235a7fddd0b2355b84d7ea6#egg=taming-transformers \
           -e git+https://github.com/openai/CLIP.git@d50d76daa670286dd6cacf3bcd80b5e4823fc8e1#egg=clip \
           -e .
-else
-    activate ldm
 fi
 
 function validateDownloadModel() {
