@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd /app
+mkdir -p img/inputimg
 
 if ! conda env list | grep ldm ; then
     conda env create -f environment.yaml
@@ -32,4 +33,4 @@ function validateDownloadModel() {
 
 validateDownloadModel model.ckpt models/ldm/stable-diffusion-v1 https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media fe4efff1e174c627256e44ec2991ba279b3816e364b49f9be2abc0b3ff3f8556
 
-./run-invert.sh 0,1
+./run-invert.sh 0,1 pose
