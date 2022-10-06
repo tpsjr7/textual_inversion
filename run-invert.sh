@@ -15,7 +15,7 @@ if [ "$2" = "" ] ; then
   echo "usage: $0 <gpus> <init_word>"
   exit 1
 fi
-python main.py --base configs/stable-diffusion/v1-finetune.yaml \
+python main.py --base configs/stable-diffusion/v1-finetune-lowmem.yaml \
                -t \
                --actual_resume models/ldm/stable-diffusion-v1/model.ckpt \
                -n textinvertrun \
